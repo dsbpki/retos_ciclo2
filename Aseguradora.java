@@ -1,3 +1,4 @@
+//First challenge
 package Aseguradora;
 public class Aseguradora {
 	public static double liquidarPrestaciones(int salario, int diasTrabajados) {
