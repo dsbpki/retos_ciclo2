@@ -1,0 +1,23 @@
+//First challenge
+//package Aseguradora;
+public class Aseguradora {
+	public static double liquidarPrestaciones(int salario, int diasTrabajados) {
+		double _2moreOfSalary = 908.526*2;
+		
+		double prima = salario*diasTrabajados/360;
+		double sesantias = salario*diasTrabajados/360;
+		double interesesCesantias = sesantias*0.12;
+		double vacaciones = salario*diasTrabajados/720;
+		double liquidacion = prima+sesantias+interesesCesantias+vacaciones;
+		return liquidacion;
+	}
+	
+	public static double liquidarSegSocial(int salario, int diasTrabajados) {
+		double salud = salario*0.085;
+		double pension = salario*0.12;
+		double riesgos_laborales = salario*0.00522;
+		double resultado = salud+pension+riesgos_laborales;
+		return resultado;
+	}
+
+}

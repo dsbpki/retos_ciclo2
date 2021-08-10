@@ -1,0 +1,13 @@
+// First challenge
+package Aseguradora;
+
+public class main {
+
+	public static void main(String[] args) {
+		System.out.println("las prestaciones son: "+ Aseguradora.liquidarPrestaciones(1810050, 150));
+		System.out.println("La seguridad social es: "+Aseguradora.liquidarSegSocial(1810050, 150));
+		System.out.println("las prestaciones son2: "+ Aseguradora.liquidarPrestaciones(1810050, 150));
+		System.out.println("La seguridad social es2: "+Aseguradora.liquidarSegSocial(1810050, 150));
+	}
+
+}

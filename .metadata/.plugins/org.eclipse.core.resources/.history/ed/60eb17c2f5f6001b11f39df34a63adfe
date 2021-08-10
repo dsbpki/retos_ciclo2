@@ -1,0 +1,11 @@
+// First challenge
+package Aseguradora;
+
+public class main {
+
+	public static void main(String[] args) {
+		System.out.println(Aseguradora.liquidarPrestaciones(1810050/*2000000*/, 292));
+		System.out.println(Aseguradora.liquidarSegSocial(1810050/*2000000*/, 292));
+	}
+
+}
