@@ -1,0 +1,14 @@
+package liquidarPrestaciones;
+
+public class Aseguradora {
+	
+	public static double liquidarPrestaciones(int salario, int diasTrabajados) {
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
