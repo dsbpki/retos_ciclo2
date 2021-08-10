@@ -18,7 +18,7 @@ public class Aseguradora {
 	}
 
 
-	public static double liquidarPrestaciones(/*int salario*/Empleado empleado, int diasTrabajados) {
+	public static double liquidarPrestaciones(Empleado empleado, int diasTrabajados) {
 		//double _2moreOfSalary = 908.526*2;
 		if (empleado.getSalario() <= 2*908526 ) {
 			
@@ -45,7 +45,7 @@ public class Aseguradora {
 		}
 
 	
-	public static double liquidarSegSocial(/*int salario*/Empleado empleado, int diasTrabajados) {
+	public static double liquidarSegSocial(Empleado empleado, int diasTrabajados) {
 		double salud = empleado.getSalario()/30*diasTrabajados*0.085;
 		double pension = empleado.getSalario()/30*diasTrabajados*0.12;
 		double riesgos_laborales =empleado.getSalario()/30*diasTrabajados*0.00522;
@@ -56,12 +56,11 @@ public class Aseguradora {
 	
 	public static double liquidarNomina(Empleado empleado, int diasTrabajados){
 		double nomina;
-		if(empleado.getSalario()>= 2*908526) {
-			int auxTransporte = 106454;
-			double salario = empleado.getSalario()+ auxTransporte;
+		if(empleado.getSalario()<= 2*908526) {
+			double auxTransporte = 106454;
+			double salario = (empleado.getSalario()+ auxTransporte)/30*diasTrabajados;
 			double salud = empleado.getSalario()*0.04/30*diasTrabajados;
-			double pension = empleado.getSalario()*0.04/30*diasTrabajados;
-			//nomina = salario -salud-pension;
+			double pension = empleado.getSalario()*0.04/30*diasTrabajados;			
 			nomina = salario - salud -pension;
 			
 		}
@@ -69,8 +68,8 @@ public class Aseguradora {
 			
 			double salud = empleado.getSalario()*0.04/30*diasTrabajados;
 			double pension = empleado.getSalario()*0.04/30*diasTrabajados;
-			//nomina = empleado.getSalario() -salud-pension;
-			nomina = empleado.getSalario() - salud - pension;
+			double salario = empleado.getSalario()/30*diasTrabajados;
+			nomina = salario - salud - pension;
 			
 		}
 		return nomina;
